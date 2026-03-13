@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "d9f50be9b4331e1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "e33f3ff2a153b6d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af63efe574aef495",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/User Management.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "User Management"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fabeb3b5de3cc98c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d37e774cafc7785f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4a82c0b4e708498",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c94c15ce282aa03d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "604a29e637aa3554",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "719c6dec2bdbfeb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ffa13a5072f7777",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "095d3b5119fb595c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2026-03-12.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2026-03-12"
+            }
+          },
+          {
+            "id": "2d63f09f20856bc8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2026-03-12.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2026-03-12"
+            }
+          },
+          {
+            "id": "ccb1cd1e100febd5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7879807a8ebd80b9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "38b2f9a36af93c4c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-03-12.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2026-03-12"
+            }
+          },
+          {
+            "id": "304035c204519764",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "af63efe574aef495",
+  "lastOpenFiles": [
+    "Linux/Process.md",
+    "Linux/User Management.md",
+    "Linux/The permission levels.md",
+    "Pasted image 20260312172119.png",
+    "Pasted image 20260312110347.png",
+    "Pasted image 20260312105857.png",
+    "Pasted image 20260312105343.png",
+    "Excalidraw/Drawing 2026-03-12 10.47.54.excalidraw.md",
+    "Untitled.canvas",
+    "Excalidraw",
+    "Pasted image 20260312102845.png",
+    "Pasted image 20260312101743.png",
+    "Untitled.md",
+    "Templates/Daily-study-template.md",
+    "Templates.md",
+    "Templates",
+    "User Management in Linux.md",
+    "Linux",
+    "2026-03-12.md",
+    "Welcome.md"
+  ]
+}
