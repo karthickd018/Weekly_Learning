@@ -490,6 +490,3 @@ bg
 
 ---
 
-## 9. Conclusion
-
-Process management is a key concept in Linux that helps users monitor and control running programs. Understanding processes, signals, and job control is essential for system administration and DevOps operations.
