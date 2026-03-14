@@ -676,7 +676,11 @@ this helps to understand how init manages services|
 
 most important cmds:
 	ps -p 1
+
 	systemctl status ssh
+
 	systemctl start ssh
+
 	systemctl stop ssh
+	
 	systemctl enable ssh
