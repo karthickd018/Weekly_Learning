@@ -1,3 +1,26 @@
+# Linux Filesystem Hierarchy
+
+| Directory | Purpose                |
+| --------- | ---------------------- |
+| /         | Root directory         |
+| /bin      | Essential commands     |
+| /boot     | Boot files             |
+| /dev      | Device files           |
+| /etc      | Configuration files    |
+| /home     | User directories       |
+| /lib      | Libraries              |
+| /media    | Removable media        |
+| /mnt      | Mount point            |
+| /opt      | Optional software      |
+| /proc     | Process information    |
+| /root     | Root user home         |
+| /sbin     | System commands        |
+| /tmp      | Temporary files        |
+| /usr      | User applications      |
+| /var      | Logs and variable data |
+
+
+
 # Linux User Administration and Permissions
 
 ## User Administration Basics
@@ -488,5 +511,172 @@ bg
 | fg      | Bring job to foreground             |
 | bg      | Resume job in background            |
 
+| Signal  | Number | Description                  |
+| ------- | ------ | ---------------------------- |
+| SIGINT  | 2      | Interrupt process (Ctrl + C) |
+| SIGQUIT | 3      | Quit process                 |
+| SIGKILL | 9      | Force kill process           |
+| SIGTERM | 15     | Graceful termination         |
+| SIGSTOP | 19     | Stop process                 |
+| SIGCONT | 18     | Continue stopped process     |
+
+
 ---
 
+# INIT SYSTEM
+
+what it is :
+if we turn on a computer,linux kernel loads first 
+after that it need a program to start other processes and services 
+`that program is called init system`
+
+Init system = the first process that starts after the Linux kernel boots.
+
+	It manages:
+
+	Starting services
+
+	Stopping services
+
+	System shutdown
+
+	System reboot
+
+## Boot Process Overview
+
+1️⃣ BIOS / UEFI
+Hardware initialization
+
+2️⃣ Bootloader (GRUB)
+Loads the Linux kernel
+
+3️⃣ Kernel
+Loads drivers and mounts root filesystem
+
+4️⃣ Init system (PID 1)
+Starts all system services
+
+5️⃣ System ready	
+
+## Responsibilities of Init System
+
+The init system is responsible for:
+| Task                     | Explanation             |
+| ------------------------ | ----------------------- |
+| Start services           | ssh, network, cron      |
+| Stop services            | when shutting down      |
+| Manage processes         | keep services running   |
+| Handle runlevels/targets | system modes            |
+| Boot initialization      | start system components |
+
+## Types of Init Systems
+
+There are three major init systems in Linux history.
+
+| Init System | Description            |
+| ----------- | ---------------------- |
+| SysV Init   | Traditional Linux init |
+| Upstart     | Event-based init       |
+| systemd     | Modern Linux init      |
+
+## SysV Init (System V Init)
+
+This is the oldest init system.
+
+It uses runlevels to control system states.
+
+| Runlevel | Meaning          |
+| -------- | ---------------- |
+| 0        | Shutdown         |
+| 1        | Single user mode |
+| 3        | Multi-user mode  |
+| 5        | Graphical mode   |
+| 6        | Reboot           |
+
+ex:init 0 - cmd used shutdown the system
+
+## Upstart
+
+Upstart was introduced to replace SysV Init.
+
+It is `event-based`, 
+
+`meaning services start when events happen`
+
+Example events:
+
+filesystem mounted
+
+network started
+
+hardware detected
+
+## systemd (Modern Init System)
+
+Most modern Linux distributions use systemd.
+
+Examples:
+
+Ubuntu
+
+Debian
+
+Fedora
+
+CentOS
+
+Arch
+
+systemd is:
+
+Faster
+
+Parallel service startup
+
+Better service management
+
+## systemd Components
+
+| Component  | Purpose               |
+| ---------- | --------------------- |
+| systemctl  | control services      |
+| journald   | logging               |
+| unit files | service configuration |
+| targets    | replace runlevels     |
+
+
+## systemd Targets (Runlevels Replacement)
+
+| SysV Runlevel | systemd Target    |
+| ------------- | ----------------- |
+| 0             | poweroff.target   |
+| 1             | rescue.target     |
+| 3             | multi-user.target |
+| 5             | graphical.target  |
+| 6             | reboot.target     |
+
+
+`An init system is the first process started by the Linux kernel during boot. It has PID 1 and is responsible for initializing the system and managing services and processes.`
+
+## example init commands
+|command|purpose|
+|:---|:---|
+|ps -p 1 | to check which init system my system uses|
+|systemctl list-units --type=service | to check all running services|
+|systemctl status ssh|to see the status of secure shell , u'll see service state ,logs,PID,
+this helps to understand how init manages services|
+|sudo systemctl start ssh| start a servie|
+|sudo systemctl stop ssh|to stop a service|
+|sudo systemctl stop ssh|Stop a Service|
+|sudo systemctl restart ssh|restart a service|
+|sudo systemctl enable ssh|enables ssh|
+|systemctl is-enabled ssh| enabled or disabled|
+|sudo systemctl disable ssh| to disable the ssh|
+|systemd-analyze|this shows boot performance|
+
+most important cmds:
+	ps -p 1
+	systemctl status ssh
+	systemctl start ssh
+	systemctl stop ssh
+	systemctl enable ssh
